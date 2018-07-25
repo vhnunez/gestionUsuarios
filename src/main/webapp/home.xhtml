@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+				xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:b="http://bootsfaces.net/ui"
+                xmlns:sec="http://www.springframework.org/security/tags"
+                template="/template/layoutPubblico.xhtml">
+
+	<ui:define name="body">  
+		 <b:container>
+            <b:jumbotron>
+                <h1>Gestione Utenti</h1>
+                <p> Un esempio di applicazione web realizzata con Spring Boot, Spring Security, Spring Data JPA e JSF</p>
+                <p> The Spring Side <a href="http://www.thespringside.com">www.thespringside.com</a></p>
+           
+                <p>
+                	<a href="login.xhtml" class="btn btn-lg btn-info">Accedi »</a>
+                    <a href="registrazione.xhtml" class="btn btn-lg btn-info">Registrati »</a>
+                </p>
+            </b:jumbotron>
+        </b:container>
+	</ui:define>
+</ui:composition>

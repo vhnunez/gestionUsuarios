@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui" xmlns:b="http://bootsfaces.net/ui">
+
+	<h:head>
+		<title>Gestione Utenti</title>
+		<meta name="author" content="Roberto Venanzi (www.thespringside.com)"></meta>
+		<h:outputStylesheet library="css" name="style.css" />
+	</h:head>
+
+	<h:body style="padding-top: 50px; padding-bottom: 20px;">
+
+		<b:navBar brand="Gestione Utenti" brandHref="/home.xhtml" inverse="true" fixed="top">
+			<b:navbarLinks>
+				<b:navLink value="The Spring Side" href="#"></b:navLink>
+				<b:dropMenu value="Utenti">
+					<b:navLink value="Registrazione" href="/registrazione.xhtml"></b:navLink>
+					<b:navLink value="Lista Utenti" href="/secure/listaUtenti.xhtml"></b:navLink>
+				</b:dropMenu>
+			</b:navbarLinks>
+	
+			<h:form styleClass="navbar-form navbar-right">
+				<div class="form-group">
+					<h:outputText fieldSize="sm" />
+				</div>
+	
+				<b:commandButton ajax="false" action="#{loginController.logoutPage}"
+					value="logout" look="success" icon="chevron-right" iconAlign="right" />
+			</h:form>
+	
+			<b:navbarLinks pull="right">
+				<b:navLink value="#{loginController.utenteConnesso}"
+					iconAwesome="fa-user" href="#"></b:navLink>
+			</b:navbarLinks>
+	
+		</b:navBar>
+
+		<ui:insert name="body">
+			<b:jumbotron>
+				<b:container>
+					<h1>Pagina Protetta</h1>
+					<p>Solo gli utenti autorizzati possono visualizzare questa
+						pagina!</p>
+					<p>
+						<a
+							href="https://github.com/thespringside/gestioneUtenti" target="_blank" 
+							class="btn btn-lg btn-info">View Page Source »</a>
+					</p>
+				</b:container>
+			</b:jumbotron>
+			<b:container>
+				<b:row>
+					<b:column col-md="4">
+						<h2>Heading</h2>
+						<p>Donec id elit non mi porta gravida at eget metus. Fusce
+							dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
+							ut fermentum massa justo sit amet risus. Etiam porta sem malesuada
+							magna mollis euismod. Donec sed odio dui.</p>
+						<p>
+							<b:button outcome="" value="View details »" />
+						</p>
+					</b:column>
+					<b:column col-md="4">
+						<h2>Heading</h2>
+						<p>Donec id elit non mi porta gravida at eget metus. Fusce
+							dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
+							ut fermentum massa justo sit amet risus. Etiam porta sem malesuada
+							magna mollis euismod. Donec sed odio dui.</p>
+						<p>
+							<b:button outcome="" value="View details »" />
+						</p>
+					</b:column>
+					<b:column col-md="4">
+						<h2>Heading</h2>
+						<p>Donec id elit non mi porta gravida at eget metus. Fusce
+							dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
+							ut fermentum massa justo sit amet risus. Etiam porta sem malesuada
+							magna mollis euismod. Donec sed odio dui.</p>
+						<p>
+							<b:button outcome="" value="View details »" />
+						</p>
+					</b:column>
+				</b:row>
+				<hr />
+				<footer>
+					<p>©TheSpringSide 2016</p>
+				</footer>
+			</b:container>
+		</ui:insert>
+
+		<ui:insert name="footer">
+			<b:container>
+				<hr />
+				<footer>
+					<p>©TheSpringSide 2016</p>
+				</footer>
+			</b:container>
+		</ui:insert>
+
+	</h:body>
+</html>
